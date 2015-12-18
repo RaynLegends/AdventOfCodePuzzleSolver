@@ -21,6 +21,8 @@ import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.SwingConstants;
 
+import com.gmail.raynlegends.adventofcode.puzzles.*;
+
 public class GUI {
 
 	public static final Dimension MAIN_DIMENSION = new Dimension(550, 400);
@@ -160,19 +162,38 @@ public class GUI {
 
 		});
 
-		for (Class<?> current : Utils.find("com.gmail.raynlegends.adventofcode.puzzles")) {
-			try {
-				Object instance = current.newInstance();
-
-				if (instance instanceof Puzzle) {
-					puzzle.addItem((Puzzle) instance);
-				}
-			} catch (Exception e) {
-				// The current class isn't a Puzzle
-			}
-		}
+		addItem(new _01_1_Puzzle());
+		addItem(new _01_2_Puzzle());
+		addItem(new _02_1_Puzzle());
+		addItem(new _02_2_Puzzle());
+		addItem(new _03_1_Puzzle());
+		addItem(new _03_2_Puzzle());
+		addItem(new _04_1_Puzzle());
+		addItem(new _04_2_Puzzle());
+		addItem(new _05_1_Puzzle());
+		addItem(new _05_2_Puzzle());
+		addItem(new _06_1_Puzzle());
+		addItem(new _06_2_Puzzle());
+		addItem(new _07_1_Puzzle());
+		addItem(new _07_2_Puzzle());
+		addItem(new _08_1_Puzzle());
+		addItem(new _08_2_Puzzle());
+		addItem(new _09_1_Puzzle());
+		addItem(new _09_2_Puzzle());
+		addItem(new _10_1_Puzzle());
+		addItem(new _10_2_Puzzle());
+		addItem(new _11_1_Puzzle());
+		addItem(new _11_2_Puzzle());
+		addItem(new _12_1_Puzzle());
+		addItem(new _12_2_Puzzle());
+		addItem(new _13_1_Puzzle());
+		addItem(new _13_2_Puzzle());
 	}
 
+	private void addItem(Puzzle puzzle) {
+		this.puzzle.addItem(puzzle);
+	}
+	
 	private void toggleEnabled(boolean enabled) {
 		input.setEnabled(enabled);
 		input.setEditable(enabled);

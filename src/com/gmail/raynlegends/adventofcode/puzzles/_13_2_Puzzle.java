@@ -113,7 +113,7 @@ public class _13_2_Puzzle implements Puzzle {
 
 	@Override
 	public String toString() {
-		return "Day 13, Part 1";
+		return "Day 13, Part 2";
 	}
 
 }
