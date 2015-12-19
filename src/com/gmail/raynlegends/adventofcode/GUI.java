@@ -188,6 +188,8 @@ public class GUI {
 		addItem(new _12_2_Puzzle());
 		addItem(new _13_1_Puzzle());
 		addItem(new _13_2_Puzzle());
+		addItem(new _14_1_Puzzle());
+		addItem(new _14_2_Puzzle());
 	}
 
 	private void addItem(Puzzle puzzle) {
