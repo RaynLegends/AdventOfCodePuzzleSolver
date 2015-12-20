@@ -110,7 +110,7 @@ public class GUI {
 					@Override
 					protected Object doInBackground() {
 						try {
-							return Main.calculate(puzzle.getSelectedItem(), input.getText());
+							return Main.calculate(puzzle.getSelectedItem(), input.getText().trim());
 						} catch (Exception e) {
 							return e;
 						}
@@ -137,6 +137,8 @@ public class GUI {
 							} else {
 								output.setText("Default output");
 							}
+							
+							frame.toFront();
 						} catch (InterruptedException e) {
 							e.printStackTrace();
 						} catch (ExecutionException e) {
@@ -190,6 +192,12 @@ public class GUI {
 		addItem(new _13_2_Puzzle());
 		addItem(new _14_1_Puzzle());
 		addItem(new _14_2_Puzzle());
+		addItem(new _15_1_Puzzle());
+		addItem(new _15_2_Puzzle());
+		addItem(new _16_1_Puzzle());
+		addItem(new _16_2_Puzzle());
+		addItem(new _17_1_Puzzle());
+		addItem(new _17_2_Puzzle());
 	}
 
 	private void addItem(Puzzle puzzle) {

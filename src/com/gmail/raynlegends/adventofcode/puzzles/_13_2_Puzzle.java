@@ -67,14 +67,10 @@ public class _13_2_Puzzle implements Puzzle {
 
 		int highestTotal = Integer.MIN_VALUE;
 		for (LinkedList<String> combination : combinations) {
-			StringBuilder builder = new StringBuilder();
-			
 			int total = 0;
 
 			int i = 0;
 			for (String person : combination) {
-				builder.append(person).append(", ");
-				
 				String previous = combination.get(i - 1 < 0 ? i - 1 + combination.size() : i - 1);
 				String next = combination.get(i + 1 >= combination.size() ? i + 1 - combination.size() : i + 1);
 
